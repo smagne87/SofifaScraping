@@ -1,0 +1,13 @@
+extends ../layout
+block content
+   h1 Scraping
+   p Sofifa.com Scraping
+   div(class='row')
+      div(class='col-md-12')
+         button(class='btn btn-success', id='btnStart') Start Scraping
+         button(class='btn btn-info', id='btnExport') Export Players
+   div(class='row')
+      div(class='col-md-12', id='progress-content')
+   div(class='row')
+      div(class='col-md-12')
+         p(id='progress-content')

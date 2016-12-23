@@ -1,0 +1,16 @@
+extends ../layout
+block content
+   h2 All Users
+    each p in list
+        div(class="row")
+            div(class="col-md-8")
+                div(class="col-md-6")
+                    small
+                        span #{p.Username}
+                        = ' '
+                        b #{p.Email}
+                div(class="col-md-6")
+                    if currentDraft
+                        a(class="btn btn-danger disabled" href="#" + p._id ) Delete User
+                    else
+                        a(class="btn btn-danger" href="/users/delete/" + p._id ) Delete User

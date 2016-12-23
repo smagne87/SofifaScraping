@@ -1,0 +1,14 @@
+extends ../layout
+block content
+    h2 All Teams
+    each u in users
+        div(class="col-md-1")
+            span(class="all-teams-header") #{u.Username}
+            ul(class="list-unstyled")
+                each p in u.Team.Players
+                    li
+                        span #{p.OrderSelected}
+                        = '-'
+                        span #{p._IdPlayer.Name}
+                        = ' '
+                        b #{p._IdPlayer.Position}

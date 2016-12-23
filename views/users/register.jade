@@ -1,0 +1,23 @@
+extends ../layout
+block content
+    h1 Register
+    div(class="row")
+        div(class="col-md-4")
+            form(name="register", id="register", action="/users/register", method="post", class="form-form-horizontal")
+               if error != ""
+                  div(class="alert alert-danger alert-dismissible", role="alert")
+                     button(type="button", class="close", data-dismiss="alert", aria-label="Close")
+                        span(aria-hidden="true") &times;
+                     span= error
+               else
+                   div(class="alert alert-danger alert-dismissible", role="alert", style="display:none;", id="errorPlaceHolder")
+                       button(type="button", class="close", data-dismiss="alert", aria-label="Close")
+                           span(aria-hidden="true") &times;
+               div(class="form-group")
+                  input(type="text", placeholder="Username", class="form-control", name="username")
+               div(class="form-group")
+                    input(type="email", placeholder="Email", class="form-control", name="email")
+                div(class="form-group")
+                    input(type="password", placeholder="Password", class="form-control", name="password")
+                div(class="form-group")
+                    button(type="submit", class="btn btn-success") Register

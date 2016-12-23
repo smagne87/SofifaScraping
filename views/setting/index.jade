@@ -1,0 +1,9 @@
+extends ../layout
+block content
+   h1 Admin Settings
+   form(action="/setting/save", id="settingsForm", method="post", class="form form-horizontal")
+       div(class="form-group")
+            input(type="checkbox", id="chkAddPlayers", name="addPlayers", checked=settings.AddPlayers)
+            label(for="chkAddPlayers") Add Players
+       div(class="form-group")
+            button(type="submit", class="btn btn-success", id="btnSubmit") Save

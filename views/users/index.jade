@@ -1,0 +1,14 @@
+extends ../layout
+block content
+    h1 Welcome #{user.Username}
+
+    if currentDraft
+        p Draft Round: #{currentDraft.RoundNumber} current player position
+            = ' '
+            b #{currentDraft.PlayerPosition}.
+        p Now is
+            = ' '
+            b #{currentUserTurn.Username}
+            = ' turn.'
+    else
+        p There isn't an active Draft Round contact admin team for a new one if needed.

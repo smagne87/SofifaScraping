@@ -1,0 +1,12 @@
+html
+    head
+    body
+        h2 New Round #{draftRound}
+        p New draft round has started: #{draftPosition}
+        a(href="http://ec2-52-11-48-198.us-west-2.compute.amazonaws.com/draft/allTeams") Link to Draft
+        each u in users
+            ul
+                li
+                    span #{u.Username}
+                    = ' '
+                    b #{u.PlayerName}

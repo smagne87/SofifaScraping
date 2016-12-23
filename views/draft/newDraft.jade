@@ -1,0 +1,9 @@
+extends ../layout
+block content
+    h1 Create Draft Round
+    p #{draftResult.message}
+
+    if draftResult.success
+        ol
+            each u in draftResult.users
+                li= u.Username

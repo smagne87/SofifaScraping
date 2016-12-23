@@ -1,0 +1,22 @@
+extends ../layout
+block content
+    h1 Select Your Next Player
+    h3 #{currentDraft.PlayerPosition}
+    p Is your turn, we finally replace the old dropdown with an autocomplete text box!
+    div(class="row")
+        div(class="col-md-4")
+            form(name="selectPlayer", id="selectPlayer", action="/draft/selectPlayer", method="post", class="form-form-horizontal")
+                if error != ""
+                    div(class="alert alert-danger alert-dismissible", role="alert")
+                        button(type="button", class="close", data-dismiss="alert", aria-label="Close")
+                            span(aria-hidden="true") &times;
+                        span= error
+                else
+                    div(class="alert alert-danger alert-dismissible", role="alert", style="display:none;", id="errorPlaceHolder")
+                        button(type="button", class="close", data-dismiss="alert", aria-label="Close")
+                            span(aria-hidden="true") &times;
+                div(class="form-group")
+                    input(type="text", placeholder="Select Player", class="form-control", name="autoCompletePlayer", id="autoCompletePlayer")
+                    input(type="hidden", name="selectedPlayerId", id="hdnSelectedPlayerId")
+                div(class="form-group")
+                    button(type="submit", class="btn btn-success", id="btnSubmit") Select Player

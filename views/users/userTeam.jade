@@ -1,0 +1,10 @@
+ul(class="list-unstyled", id="teamSelected")
+    each p in userTeam.Players
+        li
+            span #{p.OrderSelected}
+            = '-'
+            span #{p._IdPlayer.Name}
+            = ' '
+            b #{p._IdPlayer.Position}
+            = ' '
+            input(type="radio", name="playerFrom", value="#{p._IdPlayer._id}")

@@ -1,0 +1,9 @@
+extends ../layout
+block content
+    h2 Your team
+    ul(class="list-unstyled")
+        each p in team.Players
+            li
+                span #{p._IdPlayer.Name}
+                = ' '
+                b #{p._IdPlayer.Position}

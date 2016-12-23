@@ -1,0 +1,16 @@
+extends ../layout
+block content
+    h1 Current Draft Round
+    if draftResult
+        p Round Number: #{draftResult.RoundNumber}
+        p Player Position: #{draftResult.PlayerPosition}
+        ol
+            each u in draftResult.Users
+                li
+                    span= u._IdUser.Username
+                    if u._IdPlayer
+                        = ' '
+                        b= u._IdPlayer.Name
+    else
+        p There is no draft at this moment.
+

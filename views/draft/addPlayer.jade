@@ -1,0 +1,15 @@
+extends ../layout
+block content
+    h1 Select Your Next Player
+    if settings.AddPlayers
+        p Add a new player.
+        div(class="row")
+            div(class="col-md-4")
+                form(name="selectPlayer", id="selectPlayer", action="/draft/addPlayer", method="post", class="form-form-horizontal")
+                    div(class="form-group")
+                        input(type="text", placeholder="Select Player", class="form-control", name="autoCompletePlayer", id="autoCompletePlayer")
+                        input(type="hidden", name="selectedPlayerId", id="hdnSelectedPlayerId")
+                    div(class="form-group")
+                        button(type="submit", class="btn btn-success", id="btnSubmit") Select Player
+    else
+        p You cannot add a new player because the admin close the season
