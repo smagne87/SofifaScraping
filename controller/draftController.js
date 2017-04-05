@@ -44,7 +44,7 @@ dController.addNewPlayer = function(selectedPlayerId, idUser, callback){
                         });
                     });
                 });
-            });
+            }); 
         });
     });
 };
