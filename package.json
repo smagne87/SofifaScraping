@@ -17,7 +17,7 @@
     "iconv-lite": "0.4.11",
     "jade": "1.9.2",
     "json2csv": "2.12.0",
-    "mongoose": "4.1.8",
+    "mongoose": "5.9.4",
     "morgan": "1.5.3",
     "nodemailer": "1.5.0",
     "nodemailer-smtp-transport": "1.0.3",
